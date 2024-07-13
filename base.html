@@ -8,8 +8,8 @@
         <li><span>{{g.user['username']}}</span>
         <li><a href="{{url_for('auth.logout')}}">Log out</a>
         {% else %}
-        <li><a href="{{url_for("auth.register")}}">Register</a>
-        <li><a href="{{url_for("auth.login")}}">Log in</a>
+        <li><a href="{{ url_for('auth.register') }}">Register</a>
+        <li><a href="{{ url_for('auth.login') }}">Log in</a>
         {%endif%}
                 
     </ul>
@@ -26,28 +26,5 @@
     <input name="username" id="username" required>
     <label for="password">Password</label>
     <input type="password" name="password" id="password" required>
-    <input type="submit" value="Register">
-</form>
-<form method="post">
-    <label for="username">Username</label>
-    <input name="username" id="username" required>
-    <label for="password">Password</label>
-    <input type="password" name="password" id="password" required>
-    <input type="submit" value="Log in">
-
-</form>
-<form method="post">
-    <label for="username">Username</label>
-    <input name="username" id="username" required>
-    <label for="password">Password</label>
-    <input type="password" name="password" id="password" required>
-    <input type="submit" value="Register">
-</form>
-<form method="post">
-    <label for="username">Username</label>
-    <input name="username" id="username" required>
-    <label for="password">Password</label>
-    <input type="password" name="password" id="password" required>
-    <input type="submit" value="Log in">
-
+    <input type="submit" value="Register/Log in">
 </form>
