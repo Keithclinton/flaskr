@@ -1,24 +1,18 @@
 <!DOCTYPE html>
 <title>Bass Application</title>
-<link rel="stylesheet" href="url_for('static', filename='style.css')"
+<link rel="stylesheet" href="style.css"
 <nav>
     <h1> Bass app</h1>
     <ul>
-        {% if g.user %}
-        <li><span>{{g.user['username']}}</span>
-        <li><a href="{{url_for('auth.logout')}}">Log out</a>
-        {% else %}
-        <li><a href="{{ url_for('auth.register') }}">Register</a>
-        <li><a href="{{ url_for('auth.login') }}">Log in</a>
-        {%endif%}
+        <li><span></span>
+        <li><a href="auth.py">Log out</a>
+        <li><a href="auth.py">Register</a>
+        <li><a href="auth.py">Log in</a>
                 
     </ul>
 </nav>
 <section class="content">
-    <header>
-        {% block header%}
-    </header>
-    { for message in get flashed message}
+    Log In/Register
     <div class="flash message"></div>
 </section>
 <form method="post">
